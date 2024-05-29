@@ -15,10 +15,19 @@ import {
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative bg-primary z-0">
+      <div className="h-screen relative z-0 bg-black ">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />
           <Hero />
+        </div>
+        <About />
+        <Experience />
+        <Tech />
+        <Works />
+        <Feedbacks />
+        <div className="relative z-0">
+          <Contact />
+          <StarsCanvas />
         </div>
       </div>
     </BrowserRouter>
@@ -37,3 +46,6 @@ export default App;
 
 // Hosting:
 // https://vercel.com/
+
+//Home page
+//lavalamp background translucent --> moving
