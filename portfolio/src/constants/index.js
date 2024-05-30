@@ -25,14 +25,19 @@ import {
   threejs,
 } from "../assets";
 
+// add icon?
 export const navLinks = [
   {
     id: "about",
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "projects",
+    title: "Projects",
+  },
+  {
+    id: "resume",
+    title: "Resume",
   },
   {
     id: "contact",
