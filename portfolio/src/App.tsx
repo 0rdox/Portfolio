@@ -15,7 +15,7 @@ import {
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="h-screen relative z-0 bg-black ">
+      <div className="h-screen relative z-0 bg-black">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />
           <Hero />
@@ -349,5 +349,5 @@ export default App;
 
 //Home page
 //lavalamp background translucent --> moving
-
+//Create yourself using css js
 // https://gsap.com/community/forums/topic/29474-pls-pls-pls-help-me-with-this-jelly-blob/

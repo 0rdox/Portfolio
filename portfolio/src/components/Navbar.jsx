@@ -29,48 +29,55 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-4 z-20 fixed top-0 duration-500 ease-in-out ${
-        transparent ? "bg-primary" : "backdrop-blur-sm bg-red-500 bg-opacity-40"
+      } w-full flex justify-center items-center py-4 z-20 fixed top-0 duration-500 ease-in-out ${
+        transparent ? "bg-primary" : "backdrop-blur-sm  bg-opacity-40"
       }`}
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to="/"
-          className="flex items-center gap-2"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
-        >
-          <img src={js_logo} alt="logo" className="w-10 h-10 object-contain" />
-          {/* <div class="ml-2">
+      <div className="w-full flex justify-between items-center max-w-7xl mx-auto ">
+        <div>
+          <Link
+            to="/"
+            className="flex items-center gap-2"
+            onClick={() => {
+              setActive("");
+              window.scrollTo(0, 0);
+            }}
+          >
+            <img
+              src={js_logo}
+              alt="logo"
+              className="w-10 h-10 object-contain"
+            />
+            {/* <div class="ml-2">
             <p>Janko</p>
             <p>Seremak</p>
           </div> */}
-        </Link>
-        <ul className="list-non hidden sm:flex flex-row gap-10">
-          {navLinks.map((link) => {
-            return (
-              <li
-                onClick={() => {
-                  setActive(link.title);
-                }}
-                key={link.id}
-                className={`${
-                  active === link.title ? "text-white" : "text-secondary"
-                }
+          </Link>
+        </div>
+        <div>
+          <ul className="list-non hidden items-center sm:flex flex-row gap-10">
+            {navLinks.map((link) => {
+              return (
+                <li
+                  onClick={() => {
+                    setActive(link.title);
+                  }}
+                  key={link.id}
+                  className={`${
+                    active === link.title ? "text-white" : "text-secondary"
+                  }
                 hover:text-white text-[18px] font-medium cursor-pointer`}
-              >
-                <a href={`#${link.id}`}>{link.title}</a>
-              </li>
-            );
-          })}
-        </ul>
-
-        <button class="bg-purple-500 py-2 px-3">Github</button>
-        {/* Mobile Navigation 34:07 */}
-        <div></div>
+                >
+                  <a href={`#${link.id}`}>{link.title}</a>
+                </li>
+              );
+            })}
+            <button class="bg-purple-500 w-20 h-8 rounded-md">Github</button>
+          </ul>
+        </div>
       </div>
+      {/* Mobile Navigation 34:07 */}
+      <div></div>
     </nav>
   );
 };
