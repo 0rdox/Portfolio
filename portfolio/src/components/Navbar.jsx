@@ -7,10 +7,31 @@ import { js_logo, menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
+  const [transparent, setTransparent] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 0) {
+        setTransparent(false);
+      } else {
+        setTransparent(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-4 z-20 fixed top-0 bg-primary`}
+      className={`${
+        styles.paddingX
+      } w-full flex items-center py-4 z-20 fixed top-0 duration-500 ease-in-out ${
+        transparent ? "bg-primary" : "backdrop-blur-sm bg-red-500 bg-opacity-40"
+      }`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
