@@ -1,9 +1,9 @@
 import React from "react";
 
-const Works = () => {
-  return <div>Works</div>;
+const Projects = () => {
+  return <div>Projects</div>;
 };
 
-export default Works;
+export default Projects;
 
 // https://github.com/sallar/github-contributions-chart
